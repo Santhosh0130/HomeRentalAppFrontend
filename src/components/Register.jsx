@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import axios from 'axios'
 import RegisteBackground from '../assets/register_background.svg'
 import { Button, Card, Col, Container, FloatingLabel, Form, Image, Row } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+import HomeContext from '../context/Context'
 
 const Register = () => {
     const navigate = useNavigate();
+
+    const {API} = useContext(HomeContext);
 
     const [details, setSetails] = useState({
         username: '',
@@ -21,7 +24,7 @@ const Register = () => {
         e.preventDefault();
 
         console.log(details);
-        await axios.post("http://localhost:8080/auth/register", details, {
+        await axios.post(API + "auth/register", details, {
             headers: {
                 "Content-Type" : "application/json",
             },
