@@ -33,7 +33,7 @@ const Login = ({refreshAuth1}) => {
                 "Content-Type": "application/json",
             },
         }).then((response) => {
-            // alert("Sign in Successful");
+            alert("Sign in Successful");
             refreshAuth1();
             navigate("/")
         }).catch((err) => {
