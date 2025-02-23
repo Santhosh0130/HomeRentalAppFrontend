@@ -17,7 +17,7 @@ function AppHome() {
     const { data, isAddHouse } = useContext(HomeContext)
     // console.log(data)
     useEffect(() => {
-        if (data.length === 0 && location.pathname !== "/home") window.location.reload();
+        // if (data.length === 0 && location.pathname !== "/home") window.location.reload();
     }, [])
     return (
         <div>
