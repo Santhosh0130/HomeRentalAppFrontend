@@ -6,6 +6,7 @@ import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
+axios.defaults.withCredentials = true
 const AddHouse = () => {
     const { API, ownerDetails, refreshData } = useContext(HomeContext)
     // State for tracking the form step
