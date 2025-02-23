@@ -1,5 +1,17 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/api/:path*",
+      "destination": "https://home-rental-app.onrender.com/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/:path*",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "https://homerentalappfrontend.vercel.app" },
+        { "key": "Access-Control-Allow-Credentials", "value": "true" }
+      ]
+    }
   ]
 }
