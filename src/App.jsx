@@ -21,7 +21,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 // export const HomeContext = createContext();
 
-// axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = true;
 function App() {
 
 

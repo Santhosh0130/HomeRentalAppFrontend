@@ -6,6 +6,7 @@ import HomeContext from "../context/Context";
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify'
 
+axios.defaults.withCredentials = true;
 const OwnerDetailsForm = () => {
     const { API, ownerDetails, ownerDetailsData } = useContext(HomeContext)
     const navigate = useNavigate();

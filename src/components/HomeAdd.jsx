@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
+axios.defaults.withCredentials = true;
 const HomeAdd = () => {
     const [thumbnails, setThumbnails] = useState([]);
     const [product, setProduct] = useState({

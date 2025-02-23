@@ -5,6 +5,7 @@ import AppCard from './AppCard';
 import axios from 'axios';
 import NoResults from '../assets/no_results.svg'
 
+axios.defaults.withCredentials = true;
 const SearchFilter = () => {
   const { API } = useContext(HomeContext);
 

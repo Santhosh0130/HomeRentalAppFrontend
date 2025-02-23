@@ -5,6 +5,7 @@ import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
+axios.defaults.withCredentials = true;
 const MyHouses = () => {
     const { API } = useContext(HomeContext);
     const [data, setData] = useState([]);
