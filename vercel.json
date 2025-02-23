@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "https://home-rental-app.onrender.com/:path*"
+      "destination": "/index.html"
     }
   ],
   "headers": [
