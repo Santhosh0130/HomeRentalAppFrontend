@@ -34,7 +34,7 @@ const Login = ({refreshAuth1}) => {
             },
             withCredentials: true,
         }).then((response) => {
-            document.cookie = `jwt=${token}; path=/; Secure; SameSite=None;`;
+            document.cookie = `jwt=${response.data}; path=/; Secure; SameSite=None;`;
             refreshAuth1();
             navigate("/")
         }).catch((err) => {
