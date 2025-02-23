@@ -88,7 +88,7 @@ const AddHouse = () => {
     // Form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // console.log(selectedOwner, ' ', addressDetails, ' ', thumbnails, ' ', houseDetails)
+        console.log(selectedOwner, ' ', addressDetails, ' ', thumbnails, ' ', houseDetails)
 
         const formData = new FormData();
         formData.append("User", localStorage.getItem("userId"));
