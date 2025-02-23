@@ -32,6 +32,7 @@ const Login = ({refreshAuth1}) => {
             headers: {
                 "Content-Type": "application/json",
             },
+            withCredentials: true,
         }).then((response) => {
             alert("Sign in Successful");
             refreshAuth1();
