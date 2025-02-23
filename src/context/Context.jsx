@@ -131,13 +131,16 @@ export const HomeProvider = ({ children }) => {
 
   function isTokenValid() {
     const token = getCookie('jwt');
-    try {
-      const decoded = jwtDecode(token);
-      // console.log(decoded.sub)
-      return decoded.exp > Date.now() / 1000;
-    } catch (err) {
-      console.error('Error decoding token:', err);
-      return false; // Token is invalid
+    console.log("JWT IS, ", token)
+    if (isAuth) {
+      try {
+        const decoded = jwtDecode(token);
+        // console.log(decoded.sub)
+        return decoded.exp > Date.now() / 1000;
+      } catch (err) {
+        console.error('Error decoding token:', err);
+        return false; // Token is invalid
+      }
     }
   }
   // Helper function to retrieve the token from cookies
@@ -152,7 +155,7 @@ export const HomeProvider = ({ children }) => {
 
   const refreshAuth = () => {
     if (isTokenValid()) setIsAuth(true), console.log("Authendicated ", isAuth)
-    else setIsAuth(false), console.log("Not Authendicated")
+    else setIsAuth(false), console.log("Not Authendicated ", isAuth)
   }
 
   const addHouseHandle = (val) => {
