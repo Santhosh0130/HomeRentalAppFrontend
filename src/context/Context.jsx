@@ -132,7 +132,7 @@ export const HomeProvider = ({ children }) => {
   function isTokenValid() {
     const token = getCookie('jwt');
     console.log("JWT IS frm Token, ", token)
-    console.log("JWT IS, ", document.cookie)
+    console.log("JWT IS, ", document.cookie.split("; ").find(row => row.startsWith("jwt="))?.split("=")[1])
     if (isAuth) {
       try {
         const decoded = jwtDecode(token);
