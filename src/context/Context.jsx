@@ -22,8 +22,8 @@ const HomeContext = createContext({
 });
 
 export const HomeProvider = ({ children }) => {
-  // const API = 'http://192.168.197.81:8080/';
-  const API = 'http://localhost:8080/';
+  const API = 'https://home-rental-app.onrender.com/';
+  // const API = 'http://localhost:8080/';
   const [data, setData] = useState([]);
   const [cart, setCart] = useState([]);
   const [isAuth, setIsAuth] = useState(false);
