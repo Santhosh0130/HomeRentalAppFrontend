@@ -103,6 +103,7 @@ export const HomeProvider = ({ children }) => {
     if (isAuth) {
       await axios.post(API + 'auth/logout')
         .then(() => {
+          // document.cookie()
           refreshAuth();
           window.location.href = '/login';
         }).catch((err) => {
